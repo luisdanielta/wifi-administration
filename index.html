@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiFi - Administration</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+            'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+            sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #323130;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+        background-color: #eee;
+        border-radius: 24px;
+        padding: 1.5em;
+        width: 20em;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .toggle {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        width: 50px;
+        height: 25px;
+        background-color: #007AFF;
+        border-radius: 30px;
+    }
+
+    .toggle:after {
+        content: '';
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin-right: .3em;
+        background-color: #B3D7FF;
+    }
+
+    .checkbox:checked+.toggle::after {
+        margin-left: .3em;
+        background-color: #007AFF;
+    }
+
+    .checkbox:checked+.toggle {
+        background-color: #B3D7FF;
+        justify-content: left;
+    }
+
+    .checkbox {
+        display: none;
+    }
+
+    .list-net {
+        flex-direction: column;
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .network {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .name {
+        margin-left: .3em;
+    }
+
+    .icon {
+        cursor: pointer;
+    }
+
+    .add {
+        background-color: #007AFF;
+        color: #fff;
+        border: none;
+        border-radius: 24px;
+        padding: .5em;
+        height: 32px;
+        width: 96px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="container" id="container">
+            <section class="header">
+                <h1>Wi-Fi</h1>
+                <div>
+                    <input type="checkbox" id="switch" class="checkbox" />
+                    <label for="switch" class="toggle">
+                </div>
+            </section>
+            <section class="list-net">
+                <div class="network"></div>
+            </section>
+            <button class="add">add</button>
+        </div>
+        <div class="modal-add"></div>
+    </main>
+</body>
+<script>
+</script>
+
+</html>
